@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> <!--saffiche dans l'onglet *\-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--pour l'affichafe sur mobile-->
+    <title>Hangman-Web</title>
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--/* Indication à Internet Explorer d'utiliser la dernière version du moteur de rendu */*\-->
+    <link rel="stylesheet" href="styles.css"> <!-- Liaison vers le fichier CSS externe -->
+    <link rel="shortcut icon" href="./image/icon.png" type="image/x-icon">
+
+</head>
+
+<body><!--saffiche dans la page *\-->
+    <head>
+        <!-- head permet de créé le bandeau  -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            header {
+                background-color: #000000;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+                width: 100%;
+                margin: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1> HANGMAN </h1>
+            <!-- h1 est le titre sur le bandeau -->
+        </header>
+        <section>
+            <h1></h1>
+            <p name="text1"></p>
+            <p></p>
+        </section>
+        </style>
+    </body>
+
+    <head>
+        <!-- permet de mettre une iconne tous en haut de la page -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./image/icon.png" type="image/x-icon">
+    </head>
+
+    <h2>Niveaux de Difficulté</h2>
+    <style>
+        body {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .difficulty-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 25px;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        #easy-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #medium-btn {
+            background-color: #FFC107;
+            color: white;
+        }
+
+        #hard-btn {
+            background-color: #F44336;
+            color: white;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <h1>Sélectionnez le Niveau de Difficulté</h1>
+        <form action="/game" method="get">
+            {{range .}}
+            <input type="submit" value="{{.Difficulty}}" name="difficulty_value" id="{{.ClassName}}-btn" class="difficulty-btn">
+            {{end}}
+            <!-- <input type="submit" value="Medium" id="medium-btn" class="difficulty-btn">
+            <input type="submit" value="Hard" id="hard-btn" class="difficulty-btn"> -->
+        </form>
+
+</html>

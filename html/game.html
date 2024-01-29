@@ -1,0 +1,46 @@
+<!-- sur  cette page le joueur joue au pendu avec la dificulté qu'il aura choisie -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head> <!--saffiche dans l'onglet *\-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--pour l'affichafe sur mobile-->
+    <title>Hangman-Web</title>
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--/* Indication à Internet Explorer d'utiliser la dernière version du moteur de rendu */*\-->
+    <link rel="stylesheet" href="styles.css"> <!-- Liaison vers le fichier CSS externe -->
+</head>
+<style>
+    body {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .difficulty-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 25px;
+        cursor: pointer;
+        margin: 20px;
+    }
+</style>
+<body>
+    <form action="" method="post">
+        <!-- DATA A AFFICHER 
+	        MotADeviner           string
+	        DevineActuelle        string
+	        DevinettesIncorrectes []string
+	        TentativesRestantes   int
+	        LettresDevinees       []string
+	        MotsDevines           []string
+	        HangmanDessin         string
+	        Difficulty            string
+	        DevineSaisi           string
+        -->
+        <div>{{.DevineActuelle}}</div>
+        <div>{{.DevinettesIncorrectes}}</div>
+        <div>{{.HangmanDessin}}</div>
+        <input class="guess_input" name="user_guess_value" value="{{.DevineSaisi}}" type="text">
+        <input type="submit" name="submit_guess" value="Envoyer" class="difficulty-btn"/>
+    </form>
+</body>
+</html>
